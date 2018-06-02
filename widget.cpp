@@ -60,7 +60,7 @@ void Widget:: new_game(){
 
             for (int j = 0; j < y; j++)
             {
-                fills[i][j]->setBrush(QBrush(Qt::white));
+                fills[i][j]->setBrush(QBrush(Qt::cyan));
             }
         }
     }
@@ -80,10 +80,10 @@ void Widget::on_timer_timeout(){
         {
             nebs = count_neighbors(i,j); // Подсчитываем количество соседей для каждой клетки
             //Уравнения на соответствие для перерисовки
-            if (fills[i][j]->brush().color() == Qt::white && nebs == 3){
+            if (fills[i][j]->brush().color() == Qt::cyan && nebs == 3){
                 fill_temp.push_back(fills[i][j]);// Если соответствует - отправляем в вектор на перерисовку
             }
-            if (fills[i][j]->brush().color() == Qt::black && (nebs > 3 || nebs < 2)){
+            if (fills[i][j]->brush().color() == "#FF4500" && (nebs > 3 || nebs < 2)){
                 fill_temp.push_back(fills[i][j]);
             }
         }
@@ -133,7 +133,7 @@ int Widget::count_neighbors(int pos_x, int pos_y)
             temp_j = j; // Вводятся временные переменные на случай если клетка граничная и сосед из другой стороны
             if (j == -1) {temp_j = y-1;}
             else if (j == y) {temp_j = 0;}
-            if (fills[temp_i][temp_j]->brush().color() == Qt::black && !(temp_i == pos_x && temp_j == pos_y/* Если клетка - не мы*/))
+            if (fills[temp_i][temp_j]->brush().color() == "#FF4500" && !(temp_i == pos_x && temp_j == pos_y/* Если клетка - не мы*/))
             {result++;}
 
         }

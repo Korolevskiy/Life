@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>1000</height>
+    <width>457</width>
+    <height>369</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,23 +15,23 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="3" column="0">
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="text">
-      <string>START!</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="0">
     <widget class="QPushButton" name="pushButton">
      <property name="text">
-      <string>NEW GAME</string>
+      <string>Draw</string>
      </property>
     </widget>
    </item>
-   <item row="1" column="0">
+   <item row="5" column="0">
     <widget class="QGraphicsView" name="graphicsView">
      <property name="optimizationFlags">
       <set>QGraphicsView::DontAdjustForAntialiasing|QGraphicsView::IndirectPainting</set>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>ACTION!1</string>
      </property>
     </widget>
    </item>

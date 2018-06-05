@@ -59,9 +59,9 @@ public:
 
     void retranslateUi(QWidget *Widget)
     {
-        Widget->setWindowTitle(QApplication::translate("Widget", "Widget", nullptr));
-        pushButton_2->setText(QApplication::translate("Widget", "START!", nullptr));
-        pushButton->setText(QApplication::translate("Widget", "NEW GAME", nullptr));
+        Widget->setWindowTitle(QApplication::translate("Widget", "Widget", NULL));
+        pushButton_2->setText(QApplication::translate("Widget", "START!", NULL));
+        pushButton->setText(QApplication::translate("Widget", "NEW GAME", NULL));
     } // retranslateUi
 
 };

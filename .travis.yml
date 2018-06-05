@@ -8,8 +8,8 @@ before_install:
 
 
 script:
-  - qmake -qt=qt5
-  - travis_wait 50 make
+  - qmake qmake-gtest.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug
+  - make
   - ./tests/tests
 
 after_success:

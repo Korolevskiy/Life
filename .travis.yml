@@ -8,7 +8,7 @@ before_install:
 
 
 script:
-  - qmake ./gtest-master/qmake-gtest.pro -qt=qt5
+  - qmake ./gtest-master/qmake-gtest.pro
   - make
   - ./tests/tests
 

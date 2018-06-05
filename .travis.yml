@@ -3,13 +3,18 @@ language:
 
 before_install:
   - pip install --user cpp-coveralls
+  - sudo apt-get install qtdeclarative5-dev qt5-default
+
+
 
 script:
-  - qmake
-  - make
+  - ./makeswap.sh
+  - qmake -qt=qt5
+  - travis_wait 50 make
+  - ./tests/tests
 
 after_success:
-  - coveralls --root . -E ".*external.*" -E ".*tests.*"
+  - coveralls --root . -E ".*googletest.*" -E ".*moc_.*"
 
 notifications:
-  email: false
+email: false

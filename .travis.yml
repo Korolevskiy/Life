@@ -8,7 +8,7 @@ before_install:
 
 
 script:
-  - qmake ./gtest-master/qmake-gtest.pro -std=c++11
+  - qmake ./gtest-master/qmake-gtest.pro
   - make 
   - ./tests/tests
 

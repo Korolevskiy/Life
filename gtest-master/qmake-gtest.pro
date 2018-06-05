@@ -5,7 +5,7 @@ CONFIG += qt
 
 QT  += widgets
 
-QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage -O0 -std=c++0x
+QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage -O0 -std=c++11
 
 SUBDIRS = app tests
 

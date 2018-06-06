@@ -65,7 +65,7 @@ TEST (NewGame, test2){
 
 */
 
-TEST (fgdsf, sd) {
+TEST (NonWidgetTest, test1) {
     SUCCEED();
 }
 #endif // FIBONACHI_H

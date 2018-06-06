@@ -9,7 +9,8 @@ before_install:
 
 script:
   - qmake ./gtest-master/qmake-gtest.pro
-  - make 
+  - make
+  - xvfb -run
   - ./tests/tests
 
 after_success:

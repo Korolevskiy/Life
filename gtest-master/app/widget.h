@@ -18,7 +18,7 @@ class Widget : public QWidget
 public:
     Widget(int x,int y);
     ~Widget();
-private slots:
+public slots:
     void on_pushButton_clicked();
     void on_timer_timeout();
     void on_pushButton_2_clicked();

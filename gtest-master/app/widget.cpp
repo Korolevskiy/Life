@@ -19,7 +19,6 @@ Widget::~Widget()
 void Widget::on_pushButton_clicked()
 {
      new_game();
-
 }
 
 void Widget:: new_game(){
@@ -44,7 +43,6 @@ void Widget:: new_game(){
     }
     else
     { 
-
         timer->stop();
         iterations = 0;
         for (int i = 0; i < x; i++){
@@ -58,7 +56,6 @@ void Widget:: new_game(){
     /*  А вот в GUI теперь выставляем нашу сцену*/
     ui->graphicsView->setScene(scene);
 }
-
 
 void Widget::on_timer_timeout(){
     int nebs ; 
@@ -88,7 +85,6 @@ void Widget::on_timer_timeout(){
         }
         iterations++;
     }
-
 }
 
 void Widget::on_pushButton_2_clicked()
@@ -97,8 +93,6 @@ void Widget::on_pushButton_2_clicked()
         timer->start();
     }
 }
-
-
 
 int Widget::count_neighbors(int pos_x, int pos_y)
 {
@@ -117,7 +111,6 @@ int Widget::count_neighbors(int pos_x, int pos_y)
             else if (j == y) {temp_j = 0;}
             if (fills[temp_i][temp_j]->brush().color() == "#FF4500" && !(temp_i == pos_x && temp_j == pos_y/* Если клетка - не мы*/))
             {result++;}
-
         }
     }
     return result; 

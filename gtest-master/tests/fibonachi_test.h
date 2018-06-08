@@ -84,6 +84,11 @@ TEST (NonWidgetTest, test2) {
 
 
 TEST (NonWidgetTest, test3) {
+        int argc = 0; char *argv[3] = {};
+    QApplication a(argc, argv);
+    Widget w(10,10);
+    w.new_game();
+    w.new_game();
     SUCCEED();
 }
 

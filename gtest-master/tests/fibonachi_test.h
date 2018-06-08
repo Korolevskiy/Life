@@ -68,4 +68,46 @@ TEST (NewGame, test2){
 TEST (NonWidgetTest, test1) {
     SUCCEED();
 }
+
+
+
+TEST (NonWidgetTest, test2) {
+    int argc = 0; char *argv[3] = {};
+    QApplication a(argc, argv);
+    Widget w(10,10);
+    w.new_game();
+    w.fills[0][0]->setBrush(Qt::cyan);
+    w.fills[0][0]->changeColor();
+    SUCCEED();
+}
+
+
+
+TEST (NonWidgetTest, test3) {
+    SUCCEED();
+}
+
+
+
+TEST (NonWidgetTest, test4) {
+    SUCCEED();
+}
+
+
+
+TEST (NonWidgetTest, test5) {
+    SUCCEED();
+}
+
+
+
+TEST (NonWidgetTest, test6) {
+    SUCCEED();
+}
+
+
+
+TEST (NonWidgetTest, test7) {
+    SUCCEED();
+}
 #endif // FIBONACHI_H

@@ -102,7 +102,7 @@ TEST (NonWidgetTest, test4) {
     w.new_game();
     w.fills[0][0]->setBrush(Qt::cyan);
     w.fills[0][0]->changeColor();
-    w->on_timer_timeout();
+    w.on_timer_timeout();
     SUCCEED();
 }
 

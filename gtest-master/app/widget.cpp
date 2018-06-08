@@ -69,7 +69,7 @@ void Widget:: new_game(){
 
 
 
-void Widget::on_timer_timeout(){
+public void Widget::on_timer_timeout(){
     int nebs ; // Переменная для хранения числа соседей
     QVector< LifeRect* > fill_temp; // Вектор в который попадают указатели, на те элементы цвет которых мы будем менять
    //Обход каждого элемента:

@@ -70,14 +70,11 @@ void Widget:: new_game(){
 
 void Widget::on_timer_timeout(){
     int nebs ; // Переменная для хранения числа соседей
-    QVector< LifeRect* > fill_temp; // Вектор в который попадают указатели, на те элементы цвет которых мы будем менять
-   //Обход каждого элемента:
+    QVector< LifeRect* > fill_temp; 
     for (int i = 0; i < x; i++){
 
         for (int j = 0; j < y; j++)
-        {
-            nebs = count_neighbors(i,j); // Подсчитываем количество соседей для каждой клетки
-            //Уравнения на соответствие для перерисовки
+        {   nebs = count_neighbors(i,j);
             if (fills[i][j]->brush().color() == Qt::cyan && nebs == 3){
                 fill_temp.push_back(fills[i][j]);// Если соответствует - отправляем в вектор на перерисовку
             }
@@ -93,9 +90,7 @@ void Widget::on_timer_timeout(){
         iterations = 0;// Обнуляем количество итераций
     }
     else // Если вектор не пуст - ничего не обнуляем
-    {
-        // Обходим вектор с помощью итератора и тащем-то меняем цвет у тех клеток цвет которых надо поменять
-        QVector< LifeRect* >::iterator it = fill_temp.begin();
+    {   QVector< LifeRect* >::iterator it = fill_temp.begin();
         for (;it !=fill_temp.end();it++){
             (*it)->changeColor();
         }
@@ -107,8 +102,7 @@ void Widget::on_timer_timeout(){
 void Widget::on_pushButton_2_clicked()
 {
     if (scene != NULL) {
-        //Если сцена - существует то говорим таймеру что мы стартуем, как говорила какая-то бабка из видео, хз забыл.
-    timer->start();
+        timer->start();
     }
 }
 
@@ -122,11 +116,9 @@ int Widget::count_neighbors(int pos_x, int pos_y)
     int temp_j;
     int result = 0;
     for (i = pos_x -1 ; i <= pos_x + 1; i++) {
-
         temp_i = i; // Вводятся временные переменные на случай если клетка граничная и сосед из другой стороны
         if (i == -1) {temp_i = x-1;}
         else if (i == x) {temp_i = 0;}
-
         for (j = pos_y-1; j <= pos_y+1; j++) {
             temp_j = j; // Вводятся временные переменные на случай если клетка граничная и сосед из другой стороны
             if (j == -1) {temp_j = y-1;}

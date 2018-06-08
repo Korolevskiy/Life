@@ -109,6 +109,25 @@ TEST (NonWidgetTest, test4) {
 
 
 TEST (NonWidgetTest, test5) {
+        int argc = 0; char *argv[3] = {};
+    QApplication a(argc, argv);
+    Widget w(10,10);
+    w.new_game();
+    w.on_pushButton_clicked();
+    w.fills[0][0]->setBrush(Qt::cyan);
+    w.fills[0][0]->changeColor();
+    w.fills[0][1]->changeColor();
+    w.fills[0][2]->changeColor();
+    w.fills[0][3]->changeColor();
+    w.fills[0][4]->changeColor();
+    w.fills[2][1]->changeColor();
+    w.fills[2][2]->changeColor();
+    w.fills[2][3]->changeColor();
+    w.fills[2][4]->changeColor();
+    w.fills[6][1]->changeColor();
+    w.fills[6][2]->changeColor();
+    w.fills[6][3]->changeColor();
+    w.on_pushButton_2_clicked();
     SUCCEED();
 }
 
